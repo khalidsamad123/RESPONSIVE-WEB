@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"      rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Seo Expert</title>
@@ -15,7 +16,7 @@
 
     <header>
         <nav>
-            <div class="logo">Seo <span>Exp</span></div>
+            <div class="logo"><span id="seo">Seo </span><span>Exp</span></div>
             <div class="menu">
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -23,9 +24,12 @@
                 <a href="#">Contact</a>
                 <div class="search">
                     <input type="text" placeholder="search">
-                    <i class="fa fa-search" id="icon"></i>
+                    <i class="fa fa-search" id="search-icon"></i>
                 </div>
-                <i class="fa-regular fa-moon" id="mode"></i>
+                <div class="dark-mode">
+                <button onclick="darkmode()"><i class="fa-regular fa-moon" id="mode"></i></button>
+            </div>
+        
             </div>
         </nav>
         <div class="container">
@@ -35,20 +39,131 @@
                 <br><br>
                 <a href="">Read more</a>
                 <div class="icons">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-twitter "></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-envelop"></i>
-                    <i class="fa-brands fa-google"></i>
+                    <i id="icone-mode1" class="fa-brands fa-whatsapp"></i>
+                    <i id="icone-mode2" class="fa-brands fa-twitter "></i>
+                    <i id="icone-mode3" class="fa-brands fa-facebook"></i>
+                    <i id="icone-mode4" class="fa-brands fa-instagram"></i>
+                    <i id="icone-mode5" class="fa-brands fa-envelop"></i>
+                    <i id="icone-mode6" class="fa-brands fa-google"></i>
                 </div>
             </div>
             <div class="right">
            
-                <img src="image/Daco_4762196.png" alt="seo images">
+                <img src="./image/seo.gif" alt="seo images">
             </div>
         </div>
     </header>
 
+    <!-- <============About section ==========> -->
+
+    <main>
+        <div class="about-container">
+            <h1 class="about">ABOUT US</h1>
+            <div class="height-clr">
+                <div class="left-about">
+                    <img src="./image/women.png" alt="">
+                </div>
+                <div class="right-about">
+                    <h1>Why Choose an <span>SEO</span> Agency?</h1>
+                    <p>An SEO agency helps improve your website's visibility on search engines, driving organic traffic and boosting your  online presence. They use proven strategies to enhance  your rankings and attract more potential customers.</p>                    
+                    <br><br>
+                    <a href="">Follow Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     
+        <section>     
+        <div class="service-container">
+            <h1 class="heading">Our Services</h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="./image/vecteezy_web-analysis-and-development-team_.jpg" alt="">
+                    <h2>Web Analysis</h2>
+                    <p>Collaborating to enhance website performance and functionality.</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <img src="./image/vecteezy_a-couple-is-doing-a-social-media-marketing-strategy_9160035.jpg"alt="">
+                       <h2>Social Media Marketing </h2>
+                    <p>A couple devising effective social media marketing plans.</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <img id="app" src="./image/app_development-removebg-preview.png" alt="">
+                    <h2>App Development</h2>
+                    <p>Creating innovative applications for various platforms.</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <img src="./image/vecteezy_a-digital-marketing-strategy-with-social-media-engagement_47075789.jpg" alt="">
+                    <h2>Digital Marketing</h2>
+                    <p>Engaging audiences through comprehensive digital marketing techniques.</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <img src="./image/vecteezy_student-online-learning-for-search-engine-optimization-and_5151168.jpg" alt="">
+                    <h2> SEO</h2>
+                    <h4>(Search Engine Optimization)</h4>
+                    <p>Students enthusiastically exploring search engine optimization.</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+                <div class="card">
+                    <img id="innovative" src="./image/44_generated.jpg" alt="">
+                    <h2>Email
+                        Marketing</h2>
+                    <p>Teams working together to drive innovation and success techniques</p>
+                    <a class="btn" href="">Read More</a>
+                </div>
+                
+            </div>
+        </div>
+           
+        <!-- <========= END SERVICE SECTION =========> -->
+
+
+        <!-- <========= FOOTER SECTION =========> -->
+
+      <footer>
+         
+       <div class="footer-container">
+        <div class="footer-main">
+            <div class="link">
+                <h4>USEFUL LINKS</h4>
+                <a href="">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">SERVICES</a>
+            </div>
+
+            <div class="email-inp">
+                <h4>NEWS LETTER</h4>
+                <input id="input" type="text" placeholder="Your Email Address">
+             <!-- <i onclick="clearfield()" class="fa-solid fa-xmark"></i> -->
+                <a href="">SUBMIT</a>
+            </div>
+
+            <div class="contact">
+                <h4>CONTACT</h4>
+                <P>36/G landhi Karachi Pakistan <br> xyz road</P>
+                <div class="icons-footer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-twitter "></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+       </div>
+
+      </footer>
+
+
+    <script src="app.js"></script>
 </body>
 </html>

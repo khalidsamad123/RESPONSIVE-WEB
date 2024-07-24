@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    transition: 0.5s ease-in-out;
+}
+
 header{
     width: 100%;
     height: 100vh;
@@ -18,7 +25,7 @@ header{
 }
 nav{
     width: 100%;
-    height: 8rem;
+    height: 6rem;
     display: flex;
     justify-content: space-between      ;
     align-items: center;
@@ -30,6 +37,7 @@ nav{
     right: 0;       
     background-color: white;
     z-index: 1000; 
+    transition: 0.5s ease-in-out;
 }
 .menu{
     display: flex;
@@ -59,7 +67,7 @@ nav{
     border: 1px solid grey;
     padding: 10px 20px;
 }
-#icon{
+#search-icon{
     padding: 10px 20px;
     right: 0;
     position: absolute;
@@ -70,7 +78,17 @@ nav{
     padding: 10px 20px;
     font-size: 1.6rem;
     margin-left: 15px;
+    
 }
+.menu button{
+    background: transparent;
+    border: none;
+}
+.light-mode{
+    background-color: black;
+    color: white;
+}
+
 .container{
     width: 100%;
     display: flex;
@@ -98,6 +116,9 @@ nav{
 }
 .left span{
     color: orange;
+}
+#seo{
+    color: black;
 }
 .left a{
     background-color: orange;
@@ -130,18 +151,22 @@ nav{
     border-radius: 50%;
 
 }
-@media only screen and (max-width:770px){
+@media only screen and (max-width:1150px){
     .logo{
         width: 100%;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2em;
+        margin-top: 10px;
         
     }
     .search{
         display: none;
     }
     #mode{
-        display: none;
+        display: flex;
+        position: relative;
+        bottom: 40px;
+        right: 100px;
     }
     nav{
         padding: 0 15px;
@@ -155,20 +180,650 @@ nav{
     .container{
         text-align: center;
         padding: 20px 40px;
+        flex-direction: row;
+    }
+    .left{
+        flex-basis: 100%;
+    }
+    .left h1{
+        font-size: 30px;
+    }
+    .left a{
+        font-size: 20px;
+    }
+    .right{
+        flex-basis: 100%;
+        position: relative;
+        right: 200px;
+        bottom: 30px;
+        padding: 20px;
+    }
+    .right img{
+       width: 100%;
+    
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        padding: 35px 20px;
+    }
+    
+}
+
+@media only screen and (max-width:992px){
+    .logo{
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 10px;
+        
+    }
+    .search{
+        display: none;
+    }
+    #mode{
+        display: flex;
+        position: relative;
+        bottom: 40px;
+        right: 100px;
+    }
+    nav{
+        padding: 0 15px;
+
+    }
+    .menu{
+        width: 100%;
+        text-align: center;
+
+    }
+    .container{
+        text-align: center;
+        padding: 20px 40px;
+        flex-direction: row;
+    }
+    .left{
+        flex-basis: 100%;
+    }
+    .left h1{
+        font-size: 30px;
+    }
+    .left a{
+        font-size: 20px;
+    }
+    .right{
+        flex-basis: 100%;
+        position: relative;
+        right: 200px;
+        bottom: 30px;
+        padding: 20px;
+    }
+    .right img{
+       width: 100%;
+    
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        padding: 35px 20px;
+    }
+    
+}
+
+
+@media only screen and (max-width:600px){
+    .logo{
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        
+    }
+    .search{
+        display: none;
+    }
+    #mode{
+         display: flex;
+         position: relative;
+         bottom: 43px;
+        right: 110px;
+    
+    }
+    nav{
+        padding: 0 15px;
+        width: 100%%;
+
+    }
+    .menu{  
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        margin-left: 15px;
+
+    }
+    .container{
+        text-align: center;
+        padding: 20px 40px;
         flex-direction: column-reverse;
     }
     .left{
         flex-basis: 100%;
     }
+
     .left a{
         width: 100px;
-        font-size: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
     .right{
         flex-basis: 100%;
         position: relative;
-        right: 100px;
+        right: 120px;
         padding: 20px;
+    }
+    .right img{
+        width: 300px;
+    }
+    .icons{
+        font-size: 10px;
+        padding: 30px 20px;
     }
     
 }
+
+@media only screen and (max-width:500px){
+    .logo{
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        
+    }
+    .search{
+        display: none;
+    }
+    #mode{
+         display: flex;
+         position: relative;
+         bottom: 43px;
+        right: 110px;
+    
+    }
+    nav{
+        padding: 0 15px;
+        width: 100%;
+
+    }
+    .menu{  
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        margin-left: 25px;
+
+    }
+    .container{
+        text-align: center;
+        padding: 20px 40px;
+        flex-direction: column-reverse;
+    }
+    .left{
+        flex-basis: 100%;
+    }
+
+    .left a{
+        width: 100px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .right{
+        flex-basis: 100%;
+        position: relative;
+        right: 120px;
+        padding: 20px;
+    }
+    .right img{
+        width: 300px;
+    }
+    .icons{
+        font-size: 10px;
+        padding: 30px 20px;
+    }
+    
+}
+/* <========= About us section ==========> */
+main{
+    background-color: #8e67ab;
+    padding: 40px;
+    height: 90vh;
+}
+.about-container h1{
+    font-size: 35px;
+}
+.about-container .about{
+    text-align: center;
+    position: relative;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.height-clr{
+    width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 10px 20px;
+   margin-top: 150px;
+   flex-wrap: wrap;
+}
+ 
+.left-about{
+    flex-basis: 40%;
+}
+.right-about{
+    flex-basis: 50%;
+    color: white;
+}
+.right-about span{
+    color: gold;
+}
+.left-about img{
+    width: 80%;
+}
+.right-about h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    
+}
+.right-about p{
+line-height: 1.5em;
+font-size: 1.2em;
+    
+}
+.right-about a{
+    
+    background-color: orange;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+.right-about a:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:992px){
+    main{
+        height: 105vh;
+        margin-bottom: 20px;
+        
+    }
+    .left-about img{
+        width: 100%;
+    }
+    .height-clr{
+        flex-direction: row;
+        text-align: center;
+        
+    }
+   
+    .right-about h1{
+        margin-bottom: 20px;
+    }
+    .right-about p{
+      text-align: center;
+     
+    }
+    .right-about a{
+        font-size: 30px;
+        
+    }
+}
+
+@media only screen and (max-width:770px){
+    main{
+        height: 150vh;
+        margin-bottom: 20px;
+        
+    }
+    .height-clr{
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .right-about h1{
+        margin-bottom: 20px;
+    }
+    .right-about p{
+      text-align: center;
+     
+    }
+    .right-about a{
+        font-size: 30px;
+        
+    }
+    .left-about img{
+        width: 80%;
+    }
+}
+
+
+
+@media only screen and (max-width:500px){
+    main{
+        height: 130vh;
+        margin-bottom: 20px;
+    }
+    .height-clr{
+        flex-direction: column;
+        text-align: center;
+    }
+    /* .left-about img{
+      width: 100%;
+    } */
+    .right-about{
+        flex-basis: 100%;
+    }
+    .right-about h1{
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .right-about p{
+      text-align: justify;
+      font-size: 15px;
+     
+    }
+    .right-about a{
+       font-size: 30px;
+       
+      }
+}
+
+/* <======== SERVICE SECTION ========> */
+
+.service-container{
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    padding: 15px 9%;
+}
+.service-container .heading{
+    text-align: center;
+    color: white;
+    text-shadow: 0 5px 10px rgb(0, 0, 0,2);
+    font-size: 50px;
+}
+.service-container .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 150px;
+  
+}
+
+.service-container .cards img{
+    width: 100%;
+}
+#app{
+   height: 24vh;
+}
+#innovative{
+    height: 20vh;
+ }
+ .service-container .cards .card{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    height: 500px;
+    transition: transform 0.3s;
+
+ }
+ .service-container .cards .card:hover{
+    box-shadow: 0 10px 15px rgb(0, 0, 3);
+    transform: scale(1.03);
+}
+ .service-container .cards .card h2{
+    font-size: 30px;
+    padding: 15px 0;
+    color: black;
+ }
+
+ .service-container .cards .card p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: black;
+    text-align: center;
+ }
+ .service-container  .card a{
+    position: relative;
+    top: 30px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 35px;
+ }
+
+ @media (max-width: 1150px) {
+    .service-container .cards {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 0;
+    }
+
+    .service-container .heading {
+        font-size: 35px;
+    }
+
+    .service-container .cards .card {
+        padding: 20px;
+    }
+}
+
+ @media (max-width: 1024px) {
+    .service-container .cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 0;
+    }
+
+    .service-container .heading {
+        font-size: 40px;
+    }
+
+    .service-container .cards .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-container .cards {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+        
+    }
+    #app{
+        height: 50vh;
+     }
+     #innovative{
+        height: 50vh;
+     }
+    .service-container .heading {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
+    .service-container .cards .card {
+        padding: 15px;
+        height: 90vh;
+    }
+
+    .service-container .card a {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    .btn{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-container .heading {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .service-container .cards .card{
+      
+    }
+    .service-container .cards .card h2 {
+        font-size: 20px;
+    }
+
+    .service-container .cards .card p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .service-container .card a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+}
+
+footer{
+    background-color: rgb(75, 20, 20);
+    color: white;
+}
+.footer-main{
+    display: flex;
+    padding: 100px;
+    justify-content: space-around;
+}
+.footer-main h4{
+    font-size: 1.3em;
+   
+}
+.link{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.link a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+    
+}
+.link a:hover{
+    color: orange;
+}
+.email-inp{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+   
+}
+.email-inp input{
+    padding: 20px 30px;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.email-inp a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+   border: 2px solid lightblue;
+    padding: 10px 20px;
+    border-radius: 25px;
+
+}
+.email-inp a:hover{
+    background-color: orange;
+    border: none;
+
+}
+.contact{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact p{
+    font-size:22px;
+}
+.contact .icons-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    
+  
+}
+.contact .icons-footer i{
+    padding: 10px;
+    transition: 400ms;
+ 
+ 
+ 
+ }
+ .contact .icons-footer i:hover{
+    background-color: orange;
+    border-radius: 50%;   
+ 
+ }
+ @media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .footer-main > div {
+        margin-bottom: 30px;
+    }
+
+    .footer-main h4 {
+        font-size: 1.1em;
+    }
+
+    .link a, .email-inp a {
+        font-size: 1em;
+    }
+
+    .email-inp input {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .email-inp a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .contact p {
+        font-size: 18px;
+    }
+
+    .contact .icons-footer i {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
